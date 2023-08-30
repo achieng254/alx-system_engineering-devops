@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -anvp
+ls -ap1 | awk '{ORS=(NR%2==0)?"\n":", "}' | awk '{print}' ORS='\n'
